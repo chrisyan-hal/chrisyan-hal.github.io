@@ -1,0 +1,12 @@
+//List of Motion Warning Messages, Traditional Chinese, last update 20220708
+0000  正常.
+0001  X軸Servo Off時收到移動命令!!
+0002  Y軸Servo Off時收到移動命令!!
+0003  Z軸Servo Off時收到移動命令!!
+0004  C軸Servo Off時收到移動命令!!
+0005  A軸Servo Off時收到移動命令!!
+0006  B軸Servo Off時收到移動命令!!
+0007  主軸轉速逾時未到達!!
+0008  軸向運動將要超越邊界限制!!
+0009  不可程式重啟或暫停同時任意單節執行!!
+0111  G31命令錯誤!!
