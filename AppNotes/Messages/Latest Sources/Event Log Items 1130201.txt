@@ -1,0 +1,268 @@
+The Detail of Event Log Items (last update 20240201 by chrisyan)
+
+Flag    Description
+------------------------------
+0x006   x-axis servo lag out of range
+0x007   y-axis servo lag out of range
+0x008   z-axis servo lag out of range
+0x009   c-axis servo lag out of range
+0x011   e-stop command ON/OFF (1 ON, 2 OFF, 11 ON at op)
+0x020   push/pop resident data while full/empty
+0x026   e-cam profile error
+0x027   rigid-tapping pitch too small
+0x028   e-cam non-zero start speed error
+0x029   e-cam compensation error
+0x048   invalid arc error
+0x049   invalid spindle status (zero speed) for rigid tapping
+0x059   fail for restricted boundary limit check ( gp, CNC_Restrict_Enable[gp], dwStatus, 0, 1 )
+0x069   step length on acm pack over max cutting accel
+0x087   not allowed to switch modes while retracing
+0x089   encoder alarm
+0x091   pcl positive feedback error
+0x092   pcl servo lag out of range
+0x093   watch-dog timeout
+0x096   compile error ( dwMotKerWarnMsgId, MotCom_iErrCode, MotCom_iErrLevel, MotCom_iErrBlock, 0 )
+0x098   pid module error
+0x099   plc module error
+0x100   kernel stopped
+//0x102   get mot data in get_next_mot() ( gp, idx, g_uPrevMotLen, mot_length[gp], uBufNo, iRet, 0, curr_mot_index[gp], 0, 907 )
+0x102   in get_next_mot() ( gp, idx, g_uPrevMotLen, mot_length[gp], uBufNo, iRet, curr_mot_index[gp], uNurbsLoadLen, mot_table[gp][0].mot.line_no )
+//0x102   get mot data in get_next_mot_n() ( gp, motstart, g_uPrevMotLen, mot_length[gp], uBufNo, iRet, 0, curr_mot_index[gp], 99, 907 )
+0x103   in get_next_mot_n() ( gp, motstart, g_uPrevMotLen, mot_length[gp], uBufNo, iRet, curr_mot_index[gp], uNurbsLoadLen, mot_table[gp][0].mot.line_no )
+0x107   canned-cycle error ( gp, iGcode, iValue, M3M4M5Status[gp], pmot->mcode )
+0x108   hardware not existed
+0x109   diff of r3 consecutive encoder reads out of range
+0x110   diff of planned abs and output abs out of range
+0x112   lag of command execution out of range
+0x114   step pulses over axis max speed  ( gp, BkValRemain[].x, IsrPulse[].x, G00MaxPulse[].x, CmpPulse[].x );
+0x115   comm. axis servo on failed due to power on status
+0x120   comm. axis alarm
+0x141   G32 指令參數不正確;  ( iSCodeCommand[], iTmpPitch, iThdCutStartAngle[], IsrSpeed[], iChkFlag );
+0x142   G32 prof_id 配置失敗;  ( ax, Pitch, Prof_id, IsrDisToGo, 0 );
+
+0x500   load file error
+0x501   reload/rewind file error
+0x502   MotionMemLoadGFile(): gp, ID, ...
+        ID = 1 - gp, 1, 0, g_iMotComStartF, g_iMotComRewCnt
+             2 - gp, 2, dwMotComStatus, 0, g_iMotComRewCnt
+             3 - gp, 3, dwMotComStatus, 0, g_iMotComRewCnt
+             4 - gp, 4, LAStartCutType, wNmPbT, wLaPm1(max jerk),
+                 wLaPm2(x max accel), wLaPm3(y max accel), wLaPm4(z max accel), wLaPm5(max arc g), wLaPm6(cut precision)
+             5 - gp, 5, wLaPm7(max rough-cut spindle speed), wLaPm8(workpiece HRC type), spindle max speed
+             10- gp, 10, iCmd, 0, 0
+             11- gp, 11, LPLiCmd[gp], g_bLowPriWriteFlag, 0
+             12- gp, 12, LPLiCmd[gp], g_bLowPriWriteFlag, 0
+             13- gp, 13, LPLiCmd[gp], LPLdwRet[gp], g_bLowPriWriteFlag
+             20- gp, 20, LPLdwRet[gp], 0, 0
+0x503   in change_to_mot();  ( gp, IsrIntPulHiRes[].x, IsrIntPulHiRes[].z, IsrAbsHiRes[].x, IsrAbsHiRes[].z );
+[0x507 .. 0x599] 特定 G-code 的執行紀錄;
+0x507   in G107Process();  ( gp, dwCylindModeF[], iCylindRad[], 107, 107 );
+0x511   in Interpolation(); AcmPack after CheckStopFlag finished ( gp, EnableScurveFlag[gp], IsrMoveEnd[gp], 0, 970 )
+0x512   in G112Process();  ( gp, dwG112IpoModeF[], iCylindRad[], G112OffsetPos[].c, 112 );
+0x513   in G113Process();
+0x524   in G124FuncCollect();  ( iBlkNum, iNBufId, iNIdx, next_mot_idx[], 907, LaLenth, NbfLength, BlkLenth, 0, 907 );
+0x528   in G28NewProcess();  ( gp, iTmpX, iTmpY, iTmpZ, iTmpC, iType, iTmpPos, G28_flag[], 1, 28 );
+0x531   in CalG00G01DistanceToGo();  ( gp, G31CodeType[], G31AxisNo[], G31MarkLossFlag, 907 );
+0x532   in G32PrepareProc();  ( gp, dist_x, dist_z, xpitch, zpitch, iThreadCutPitch[], iSCodeCommand[], iThdCutStartPos[], iThdCutStartAngle[], iCheckSPos01[] );
+0x533   in G32ThreadCutProc();
+                                ( gp, iCheckSPos00[], iSAxisAngPosFb[], CNC_machine[].s, 1 );
+                                ( gp, CNC_machine[].x, CNC_machine[].z, CNC_machine[].s, 2 );
+                                ( gp, iCheckSPos02[], CNC_machine[].s, CNC_machine[].z, CNC_machine[].x, IsrDisToGo[].z, IsrDisToGo[].x, iStep1, iStep2, 3 );
+                                ( gp, CNC_machine[].x, CNC_machine[].z, CNC_machine[].s, 5 );
+                                ( gp, CNC_machine[].x, CNC_machine[].z, CNC_machine[].s, 9 );
+0x550   in G50Process();
+0x552   in G52Process();  ( gp, iTmp, G52Offset[gp].x, G52Offset[gp].y, G52Offset[gp].z, G52Offset[gp].c, 0, 0, 0, 907 )
+0x554   in ChangeCoordinate();  ( gp, WorkCoorIdx[gp], (tidx+1), 0, 907, WorkCoor[gp][].x, WorkCoor[gp][].y, WorkCoor[gp][].z, WorkCoor[gp][].c, 907 );
+//0x556   in AcmPackList_Collect() for pack info ( id, index, curr_mot_index[gp], num, 970, accumu_const, accumu_end, const_spd, end_spd, 979 )
+0x556   in AcmPackList_Collect() for pack info ( id, index, curr_mot_index[gp], num, accumu_sglflag, accumu_len, accumu_start, accumu_const, accumu_end, accumu_sglspd )
+0x557   in AcmPackList_Collect() [if num > 1] ( 1, pAcmPack->mot[1].mot.line_no, pAcmPack->mot[1].mot.gcode0, pAcmPack->la[1].accumu_num, 0 )
+                                 [if num > 2] ( num-1, pAcmPack->mot[num-1].mot.line_no, pAcmPack->mot[num-1].mot.gcode0, pAcmPack->la[num-1].accumu_num, 0 )
+0x558   in AcmPackList_InterpPW() ( index, pAcmPack->mot[index].mot.line_no, pArcPara->iGcode, acm_qp.accumu_cnt, pAcmPack->la[0].accumu_num )
+0x559   in AcmPackList_InterpPW() ( acm_qp.accumu_cnt, pAcmPack->mot[acm_qp.accumu_cnt-1].mot.line_no, pArcPara->iGcode, pAcmPack->la[0].accumu_num, 0 )
+0x584   in G74PreProcess();
+                             ( gp, zpitch, iRigidTapDepth[], iSCodeCommand[], CNC_spindle_sts_f[], iRigidTapPNum[], iRigidPeckType[], 0, 907, 907 );
+                             ( gp, iCheckAng01[], iCheckAng02[], iRigidRpmCmd[], iRigidZFwParam[], iRigidTapPNum[], iRigidPeckType[], 1, 907, 907 );
+                             ( gp, iCheckAng01[], iCheckAng02[], check_pos, 3 );
+                             ( gp, iCheckAng01[], iCheckAng02[], check_pos, 7 );
+0x588   in G88PreProcess();
+                             ( gp, xpitch, iRigidTapDepth[], CNC_scode_cmd[], CNC_spindle_sts_f[] );
+                             ( gp, iCheckAng01[], iCheckAng02[], IsrAbsProgPos[].s2, 3 );
+                             ( gp, iCheckAng01[], iCheckAng02[], IsrAbsProgPos[].s2, 7 );
+0x596   in G96Process();
+0x597   in G97Process();
+0x598   in G98Process();
+0x599   in G99Process();
+
+[0x600 .. 0x699] 特定的執行紀錄;
+0x633   in RePlanningCmdBuff();  ( gp, ax, iD2Go, iTmpSum, iStep, iSumRem, iPulRem, iPulCmd, iPulTot, iStep_0 );
+0x640   in EnableHome();  ( h1->PortNo, h1->method, h1->ot_plus, h1->ot_minus, h1->Dog, h1->EdgeType, h1->Rev, 0, 0, 907 );
+0x645   in AxisReturnHomePro();  ( _LOW_IDX_ ) ( h1->PortNo, _LOW_IDX_, h1->ot_plus, h1->ot_minus, h1->Dog, *disto, h1->OnIndexFlag, h1->IndexPos, 0, h1->HomePhase );
+0x649   in AxisReturnHomePro();  ( _HOME_FINISH_ ) ( gp, h1->Shift, h1->DogPos, h1->DogPosTmp, h1->IndexPos );
+0x667   in  HomeProcess(), [Home] finish; ( 0, 1002, 1002, 907, 907, (gp+1000) );
+0x670   in input_jog_home(), [QHome] request; ( gp, axis_no, InputHomeFlag[], iTmpChk, G28_flag[] );
+0x671   in input_jog_home(), [QHome] request; ( gp, axis_no, InputHomeFlag[], move_gcode, G28_flag[] );
+0x675   in  GetHomeMessage(), [QHome] start; ( gp, G28_flag[], InputHomeFlag[], 0, 0 );
+0x676   in  TESTISR(), [QHome] finish; ( gp, G28_flag[], 0, 0, 0 );
+0x680   in ECAM_ext_process();  ( gp, ax, spos, mpos, EcamEgearSlaveEnable[], lpos, rpos, iEcamStartSPos[][], 0, 970 );
+0x690   in GcodePreprocess();  ( gp, next_mot_idx[], mot_length[], tidx, tint );
+0x690   execution error on acm pack
+0x691   in GcodePreprocess();  ( gp, next_mot_idx[], mot_length[], tidx, tint );
+0x691   reload mot data when feedhold, single or retrace
+0x692   tcp nc execution error on acm pack
+0x699   in change_to_mot();  ( gp, nmot[].mot.frate, mot[].frate, 0, 907 );
+;0x699   dwR0CmpFlag != 0 (to be amended)
+
+0x710   fail to write mm/inch changed
+[0x700 .. 0x799] 特定的執行紀錄;
+0x754   in ChangeCoordinate();
+                                ( gp, WorkCoorIdx[], WorkCoorOffset[].x, WorkCoorOffset[].z, tidx,  //  OLD;
+                                  0,  WorkCoorIdx[], WorkCoorOffset[].x, WorkCoorOffset[].z, 907 ); //  NEW;
+0x777   in CheckGpMSyncRelease();  ( gp, dwGpMSyncChkFlag[gp], dwGpMSyncFlag, 0, 907 );
+0x789   A_area[] update delay in UpdateAAreaFromSVar() ( i, iTmp0, iTmp1, 0, 970 ) where iTmp0 ~ A_area[i], iTmp1 ~ MR value
+0x796   in get_next_mot_n();  ( gp, g_uPrevMotLen[gp], mot_length[gp], motstart, motnum, g_uBufNo[gp], uBufNo, uNurbsLoadLen, 0, 907 );
+0x797   in Mem_Mode();  ( m_dwGroupID, CNC_mdi_mode[], 0, 0, 907 );
+0x798   in MotionMemLoadGFile();  ( m_dwGroupID, m_dwMotionMode, m_dwOpNewMode, CNC_mdi_mode[], 907 );
+
+0x800   10s routine log
+0x810   SpecEventType 1
+[0x820 .. 0x899] 特定的執行紀錄; 
+0x821   in G112_g00g01prepare();
+                                  ( gp, G112AbsPos[].x, G112AbsPos[].y, G112AbsPos[].z, G112AbsPos[].c, );
+                                  ( G112DestPos[].x, G112DestPos[].y, G112DestPos[].z, G112DestPos[].c, 907 );
+0x822   in G112_g00g01process();
+                                  ( gp, G01StepsToGo[], dbTmpFeed, dbG112IncRatio[], CNC_feed_over_cmd[] );
+                                  ( gp, iG112SubStepsToGo[], IntDouPulse[].c, IntDouPulse[].x, IntDouPulse[].z );
+0x825   in G112_proc_sub();  ( gp, iG112SubStepsToGo[], IntDouPulse[].c, IntDouPulse[].x, IntDouPulse[].z );
+0x826   in G107_CalRadius();
+                              ( gp, G107DestPos[].x, G107DestPos[].y, G107DestPos[].z, G107DestPos[].c );
+                              ( G107DisToGo[].y, G107DisToGo[].z, center_y, center_z, 907 );
+0x830   in UpdateS2AxisInRpmMode();  ( gp, S2AxisRmpCmd00[], iS2xAccStep[], iTmpCmd, 907 );
+0x832   in UpdateS2AxisInRigidMode();  ( gp, S2AxisRmpCmd99[], iS2xAccStep[], iTmpDir, iTmpCmd );
+0x840   in UpdateSAxisInRpmMode();  ( gp, SAxisRmpCmd00[], iSxAccStep[], frate, iTmpCmd );
+0x842   in UpdateSAxisInRigidMode();  ( gp, SAxisRmpCmd99[], iSxAccStep[], iTmpDir, iTmpCmd );
+0x847   in Interpolation();
+                             ( IsrIntPulse[].z, IsrDisToGo[].z, IsrAbsolute[].z,  PlanAbsolute[].z, 0);
+                             ( iTmpLogInfo[], iTmpLogInfo[], IsrAbsHiRes[].z, IsrIntPulHiRes[].z, iTmpLogInfo[] );
+0x848   G28 finish (in G01);
+0x849   G28 finish (in G00);
+                              ( gp, IsrIntPulse[gp].x, IsrIntPulse[gp].y, IsrIntPulse[gp].z, IsrIntPulse[gp].c );
+                              ( iTmpLogInfo[0], iTmpLogInfo[1], IsrAbsolute[].z, PlanAbsolute[].z, 28 );
+0x870   in M2Comm_send_request() ( node, iM2CommCmd, $612(Param_1), $613(Param_2), $616(Param_3) )
+0x880   servo lag exceeded
+0x881   in CheckBoundaryAndUpdate();  ( gp, err_id, tmp_pos_um, tmp_pos_pul, IsrMachPos[].s, IsrMachPosOffset[].s, IsrAbsolute[].s, IsrAbsProgPos[].s, IsrCmdPos[].s, IsrMachProPos[].s );
+0x881   update position boundaries
+0x890   in MSTprocess();
+                          ( gp, 1, IsrServoOffSts[], (int)dwTmp1, dwUReaseCount[] );  //  Servo-ON 超過時間;
+                          ( gp, 2, IsrServoOffSts[], (int)dwTmp1, dwUReaseCount[] );  //  Release ready;
+        in UrgentStopRelease();  ( gp, 11, IsrServoOffSts[], 0, 0 );
+0x890   e-stop release process (1 Cnt > 4900, 2 Cnt >= 5000, 11 cmd at op)
+0x892   in MSTprocess(), M-code finish;
+0x895   ISR_func timer 2 expired
+
+0x901   reset command
+0x902   error PDBF log
+0x906   replanning end of single block
+0x907   end of single block
+0x908   replanning end of idle-to-single block
+0x913   replanning end of idle-to-buffer start
+0x918   replanning end of idle-to-buffer single block
+0x921   replanning end of acmpack feedhold
+0x922   last block reached (contcmd == 0) for acmpack feedhold
+0x923   end of feedhold
+0x924   calculation for nurbs at last step of last pack
+0x925   start of replanning for stop (feedhold or single)
+0x926   end of go-to-stop
+0x928   G28 處理流程;  in GcodePreprocess();  _1    in G28NewProcessExt(); _2    in G28NewProcessExt_type_0(); _3
+0x931   switch modes (0 none, 1 mem, 2 jog, 3 edit, 4 home, 5 mdi*, 6 inc, 7 mpg, 8 lin)
+0x932   fail to switch to specified auto mode; ( gp, m_dwMotionMode, m_dwOpNewMode, -1, 0 )
+        switch to auto mode ( gp, m_dwMotionMode, m_dwOpNewMode, 51 [to stop] or 52 [stopped], 0, bSIGCm, bSIGLg, bFHold, m_bHoldFlag, 0 )
+0x937   op command load file done
+0x938   op command shut/unload file
+0x939   warn of shut/unload file op command
+0x941   get feedhold op command and set for kernel
+0x942   get single op command while running and set for kernel
+0x943   get cycle-start op command while not running and set for kernel
+0x944   get cycle-start op command while some axis is not ready;  ( gp, dwTmp1, dwTmp2, 0, 0 )
+0x944   feedhold op command due to servo off or servo error of any axis
+0x945   op command detained (941 feedhold, 942 single, 901 reset; 1 setup, 2 release)
+0x946   get cycle-start op command while feedhold and set buffer-start for kernel
+0x947   get machine-lock op command on/off
+0x949   get feedhold done from kernel and set op status
+0x951   get retrace-on op command and set
+0x952   get retrace-off op command while retracing and set
+0x953   end of retrace reached
+0x954   MpgMemModeFlag OFF to ON in auto mode
+0x955   MpgMemModeFlag ON to OFF ( IsrCurrArc[gp].iGcode, 0, 0, 0, 0 )
+0x956   SsMpgModeFlag OFF to ON ( IsrCurrArc[gp].iGcode, sum_fover_rate[gp], ss_fover_rate_num[gp], 1~2, 0 )
+0x957   SsMpgModeFlag ON to OFF ( IsrCurrArc[gp].iGcode, sum_fover_rate[gp], acm_qp.fover_rate, 1, 0 ) in LKACheckAndRePrepare()
+                                ( 0, sum_fover_rate[gp], tint1, 2, 0 ) in AcmPackList_RePrepare()
+                                ( IsrCurrArc[gp].iGcode, 0, 0, 3, 0 ) in GetMpgMemModeSpeed()
+0x958   M30 with MSTok ON
+0x959   work coordinates at cycle-start
+0x960   work coordinates changed
+0x961   get home command
+0x961   responsive compilation TTB changed ( gp, dwTmp2, comp_rad_gcd, code_no_d, 907, CNC_Prog_Running[gp], 0, 0, 0, 907 )
+0x962   responsive compilation in Restart_MotCom() ( gp, iState, MOT_line_no[gp], ModalGcode[gp][1], IsrGcode[gp], comp_rad_gcd, code_no_d, 0, 0, 907 )
+0x963   responsive compilation in Op_Restart_MotCom() ( gp, iOpt, MOT_line_no[gp], ModalGcode[gp][1], IsrGcode[gp], g_dwCommonVarChangedOutside[gp], g_dwSystemVarChangedOutside[gp],
+          Responsive_Compile_Flag[gp], Responsive_Compile_State[gp], (iOpt != 0) )
+0x965   enable home
+0x966   home process
+0x967   home done
+0x968   servo-off command changed
+0x969   servo-off status changed
+0x970   in BlockPreprocess();  ( gp, Modal_CompLenX[], Modal_CompLenY[], Modal_CompLenZ[], 0, pfmdata->comp_len_x, pfmdata->comp_len_y, pfmdata->comp_len_z, 0, 0);
+        in GcodePreprocess();  ( gp, Modal_CompLenX[], Modal_CompLenY[], Modal_CompLenZ[], 0, IsrPfmData[].comp_len_x, IsrPfmData[].comp_len_y, IsrPfmData[].comp_len_z, 0, 0);
+0x970   x, y, or z comp-length changed
+0x971   QHome command
+0x972   auto convert to QHome
+0x973   spindle speed agree timeout;
+         ( gp, CNC_spindle_spd_agr_f[], SAxisRpmMonCnt[], SAxisRpmMonNum[], CNC_spindle_RPM_value[], SAxisRmpCmdNew[], SAxisRateCmd[], SAxisCmdDir[], iTmpPos, CNC_spindle_spd_agr_range[] );
+0x973   spindle speed agree timeout
+0x974   rigid tapping process
+0x975   get G28 command from home message
+0x976   smooth filter parameter changed
+0x977   m-code process
+        ID = 3 - g-code read => m read on  (Custom_V02 = ID)
+             4 - strobe off <= mst end on
+             5 - wait mst off <= mst end off & strobe off
+             6 - mst ok on => m read off
+             7 - mst ok off & strobe on => mst end on
+             8 - mst ok off & strobe off => mst end on
+             9 - mst end on & strobe off => m-code clear
+            10 - mst end on & strobe off => mst end off
+0x978   s-code process
+0x979   t-code process
+0x980   G31 setup stages
+0x981   G31 done
+0x982   G31 failed
+0x983   rigid tapping debug (reserved)
+0x984   canned cycle command
+        Custom_Vnn = gp, Gcode, Flag, X, Y, Z, R, Q, P, K  (for G80: gp, Gcode, Flag, 0, Ret)
+        Flag = (bit 16-0) Inch, G99, G19, G18, G91, rsv, rsv, rsv, d, F, K, P, Q, R, Z, Y, X
+0x991   command or feedback speed over 1.2 factor of G00 max speed
+0x995   new max pos diff between two consecutive encoder reads
+0x996   fast loop exec time over 50ms
+0x997   remark of mst-code process
+
+0x1000  routine log dump command
+0x1001  pitch-error table update
+0x1110  log of 0x110 info
+0x1111  log of 0x110 cleared by recheck
+0x1112  detection of abnormal IsrAbsProgPosDiff
+0x1113  detection of abnormal change of IsrAbsolute
+0x2000  warning for internal calculation on acm pack
+0x2001  no space to reserve arc for smoothing
+0x2005  nurbs length/db_idx ratio too large
+0x2006  nurbs segment info error
+0x2007  nurbs length/db_idx ratio too large but special nurbs
+0x2010  inconsistency between two consecutive reads of work coordinate settings ( dwMotKerWarnMsgId, WorkCoorChkFailNum[gp], idx+0~3, iTmp, tval )
+0x3000  macro alarm
+0x3006  macro warning
+0x0a1002  set step mode parameters
+
+0x10001 fail for restricted boundary limit check ( gp, CNC_Restrict_Enable[gp], dwStatus, 0, 1 )
+------------------------------
+
+IsrContCmd:
+  1(start), 2(buf_start), 3(single), 4(buff_single), 5(feedhold), 6(stop),
+  8 (OT_alarm), 16(MPG), 17(HOME1), 18(PBACK)

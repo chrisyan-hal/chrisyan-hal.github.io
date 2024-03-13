@@ -1,0 +1,126 @@
+//List of Motion Compiling Error Messages, English, last update 20240313
+0000  No Error
+0001  No such token
+0002  Grammar error
+0003  Out of memory
+0004  Execute node error
+0005  Function error
+0006  Divided by zero
+0007  Variable over range
+0008  Domain error
+
+0010  Not allow decimal point
+0011  Word data over range
+0012  Illegal parameter input
+0013  Multiple m-codes error
+0014  Optional block skip error
+0015  Sys-Var in 2nd level expr
+0016  Sys-Var for wrong address
+0017  System variable expected
+0018  File not opened
+0019  Abnormal number
+0020  Not a number error
+0021  Nc smoothing interface
+0022  Nc smoothing set param
+0023  Nc smoothing put block
+0024  Nc smoothing pop block
+0025  Poor motdata integrity
+
+0050  X+ S-OT found
+0051  X- S-OT found
+0052  Y+ S-OT found
+0053  Y- S-OT found
+0054  Z+ S-OT found
+0055  Z- S-OT found
+
+0099  Illegal syntex error
+0100  Illegal G code
+0101  Pfm initial error
+0102  Trans initial error
+0103  Table1 initial error
+0104  Post initial error
+0105  Legal gcode but not allowed
+0106  ECD data file not found
+0107  ECD data read mismatch
+0108  Mode not supported
+0109  Failed to load parameters
+0110  Fetch error
+0111  Lack of filename
+0112  Illegal filename
+0113  File not found
+0114  Canned-cycle file not found
+0115  AppGCode file not found
+0116  TTB read or confirm failed
+0117  Get system variables failed
+0118  Case not handled
+
+0120  Post error
+0121  Lack of sub return
+0122  Program overflow
+0123  Macro overflow
+0124  Macro underflow
+0125  Without label
+0126  Block not found
+0127  Illegal label
+0128  F out of range
+
+0130  Coordinate error
+0131  Unknown plane
+0132  Invalid radius or center
+0133  Polar command error
+0134  Scaling command error
+0135  Local coordinates command error
+0136  Rotation command error
+0137  Mirror command error
+
+0140  Send table1 error
+0141  No free variables
+0142  S-code after M29
+
+0150  Insufficient data
+0151  IP maintain error
+0152  Ref return in canned cycle
+0153  No such ref return point
+0154  Illegal in canned cycle
+0155  END not found
+0156  Illegal WHILE-DO
+0157  Illegal jump in WHILE-DO
+0158  Argument negative or zero
+0159  Argument too large
+0160  Out of dnc order
+0161  Out of receive
+0162  Danger bound
+
+0170  No axis movement
+0171  Not single axis command
+0172  F small than F2
+0173  F not appeared
+0174  Out of range
+0175  End of file
+0176  Unknown symbol
+0177  CFileException error
+0178  Not all record done
+0179  Wrong expression
+0180  Wrong option number
+
+0201  Zero vector length
+0202  Start-up at arc
+0203  Cancel at arc
+0204  Zero matrix determination
+0205  Zero vector length
+0206  Interference error
+0207  No intersection
+0208  Compensate arc zero movement
+0209  Invalid arc after compensation
+
+0999  Unkonwn error
+
+2xxx  Look-ahead block processing errors
+
+3xxx  Look-ahead speed planning errors
+
+4xxx  Nurbs processing errors
+
+5xxx  Look-ahead speed replanning errors
+
+600x  Least square processing errors

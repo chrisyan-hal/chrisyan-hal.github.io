@@ -1,0 +1,307 @@
+[INFOMATION]
+Description = List of Module Error Messages
+Language = English
+Update = 20221115
+
+
+[SPECIFIC]
+x-xxx-xx-xx = ASCII Error Message
+^  ^  ^  ^
+|  |  |  +--- Error  Code :
+|  |  +------ Target ID   :
+|  +--------- AUX.   Code :
++------------ System ID   : ( 3:  SoftPLC)
+
+
+[ERROR_CODE]
+3-000-00-01 = [PLC] Ladder Pass Check Error
+3-000-00-02 = [PLC] Ladder Compile Error
+3-000-00-03 = [PLC] Ladder Link Error
+3-000-00-04 = [GDS] PLC is in compiling or debuging
+
+1-000-56-01 = [HAL8056] PCI Initialize Fail
+1-000-57-01 = [HAL8102] PCI Initialize Fail
+1-000-58-01 = [HAL8180] PCI Initialize Fail
+
+1-000-01-01 = [HAL-8040] Invalid Open I/O Resource On I/O=%3XH
+1-000-01-02 = [HAL-8040] Invalid Close I/O Resource On I/O=%3XH
+1-000-01-03 = [HAL-8040] Invalid Board Handle On I/O=%3XH
+1-000-01-04 = [HAL-8040] Invalid Board ID On I/O=%3XH
+1-000-01-05 = [HAL-8040] Invalid Get Device Lists On I/O=%3XH
+1-000-01-06 = [HAL-8040] Invalid Board Type On I/O=%3XH
+1-000-01-07 = [HAL-8040] Invalid I/O Base Address On I/O=%3XH
+1-000-01-08 = [HAL-8040] Invalid System Function Code On I/O=%3XH
+1-000-01-09 = [HAL-8040] Invalid SRAM Space On I/O=%3XH
+1-000-01-0A = [HAL-8040] Invalid I/O Port Number On I/O=%3XH
+1-000-01-0B = [HAL-8040] Invalid I/O Interrupt Channel On I/O=%3XH
+1-000-01-0C = [HAL-8040] Invalid Read I/O Port On I/O=%3XH
+1-000-01-0D = [HAL-8040] Invalid Write I/O Port On I/O=%3XH
+1-000-01-0E = [HAL-8040] Invalid I/O Controller On I/O=%3XH
+1-000-01-11 = [HAL-8040] Invalid IRQ Number On I/O=%3XH
+1-000-01-12 = [HAL-8040] Invalid Initial Interrupt On I/O=%3XH
+1-000-01-13 = [HAL-8040] Invalid Release Interrupt On I/O=%3XH
+1-000-02-01 = [HAL-8080] Invalid Open I/O Resource On I/O=%3XH
+1-000-02-02 = [HAL-8080] Invalid Close I/O Resource On I/O=%3XH
+1-000-02-03 = [HAL-8080] Invalid Board Handle On I/O=%3XH
+1-000-02-04 = [HAL-8080] Invalid Board ID On I/O=%3XH
+1-000-02-05 = [HAL-8080] Invalid Get Device Lists On I/O=%3XH
+1-000-02-06 = [HAL-8080] Invalid Board Type On I/O=%3XH
+1-000-02-07 = [HAL-8080] Invalid I/O Base Address On I/O=%3XH
+1-000-02-08 = [HAL-8080] Invalid System Function Code On I/O=%3XH
+1-000-02-09 = [HAL-8080] Invalid SRAM Space On I/O=%3XH
+1-000-02-0A = [HAL-8080] Invalid I/O Port Number On I/O=%3XH
+1-000-02-0B = [HAL-8080] Invalid I/O Interrupt Channel On I/O=%3XH
+1-000-02-0C = [HAL-8080] Invalid Read I/O Port On I/O=%3XH
+1-000-02-0D = [HAL-8080] Invalid Write I/O Port On I/O=%3XH
+1-000-02-0E = [HAL-8080] Invalid I/O Controller On I/O=%3XH
+1-000-02-11 = [HAL-8080] Invalid IRQ Number On I/O=%3XH
+1-000-02-12 = [HAL-8080] Invalid Initial Interrupt On I/O=%3XH
+1-000-02-13 = [HAL-8080] Invalid Release Interrupt On I/O=%3XH
+1-000-03-01 = [HAL-8062] Invalid Open I/O Resource On I/O=%3XH
+1-000-03-02 = [HAL-8062] Invalid Close I/O Resource On I/O=%3XH
+1-000-03-03 = [HAL-8062] Invalid Board Handle On I/O=%3XH
+1-000-03-04 = [HAL-8062] Invalid Board ID On I/O=%3XH
+1-000-03-05 = [HAL-8062] Invalid Get Device Lists On I/O=%3XH
+1-000-03-06 = [HAL-8062] Invalid Board Type On I/O=%3XH
+1-000-03-07 = [HAL-8062] Invalid I/O Base Address On I/O=%3XH
+1-000-03-08 = [HAL-8062] Invalid System Function Code On I/O=%3XH
+1-000-03-09 = [HAL-8062] Invalid SRAM Space On I/O=%3XH
+1-000-03-0A = [HAL-8062] Invalid I/O Port Number On I/O=%3XH
+1-000-03-0B = [HAL-8062] Invalid I/O Interrupt Channel On I/O=%3XH
+1-000-03-0C = [HAL-8062] Invalid Read I/O Port On I/O=%3XH
+1-000-03-0D = [HAL-8062] Invalid Write I/O Port On I/O=%3XH
+1-000-03-0E = [HAL-8062] Invalid I/O Controller On I/O=%3XH
+1-000-03-11 = [HAL-8062] Invalid IRQ Number On I/O=%3XH
+1-000-03-12 = [HAL-8062] Invalid Initial Interrupt On I/O=%3XH
+1-000-03-13 = [HAL-8062] Invalid Release Interrupt On I/O=%3XH
+1-000-04-01 = [HAL-8016] Invalid Open I/O Resource On I/O=%3XH
+1-000-04-02 = [HAL-8016] Invalid Close I/O Resource On I/O=%3XH
+1-000-04-03 = [HAL-8016] Invalid Board Handle On I/O=%3XH
+1-000-04-04 = [HAL-8016] Invalid Board ID On I/O=%3XH
+1-000-04-05 = [HAL-8016] Invalid Get Device Lists On I/O=%3XH
+1-000-04-06 = [HAL-8016] Invalid Board Type On I/O=%3XH
+1-000-04-07 = [HAL-8016] Invalid I/O Base Address On I/O=%3XH
+1-000-04-08 = [HAL-8016] Invalid System Function Code On I/O=%3XH
+1-000-04-09 = [HAL-8016] Invalid SRAM Space On I/O=%3XH
+1-000-04-0A = [HAL-8016] Invalid I/O Port Number On I/O=%3XH
+1-000-04-0B = [HAL-8016] Invalid I/O Interrupt Channel On I/O=%3XH
+1-000-04-0C = [HAL-8016] Invalid Read I/O Port On I/O=%3XH
+1-000-04-0D = [HAL-8016] Invalid Write I/O Port On I/O=%3XH
+1-000-04-0E = [HAL-8016] Invalid I/O Controller On I/O=%3XH
+1-000-04-11 = [HAL-8016] Invalid IRQ Number On I/O=%3XH
+1-000-04-12 = [HAL-8016] Invalid Initial Interrupt On I/O=%3XH
+1-000-04-13 = [HAL-8016] Invalid Release Interrupt On I/O=%3XH
+1-000-07-01 = [HAL-8063] Invalid Open I/O Resource On I/O=%3XH
+1-000-07-02 = [HAL-8063] Invalid Close I/O Resource On I/O=%3XH
+1-000-07-03 = [HAL-8063] Invalid Board Handle On I/O=%3XH
+1-000-07-04 = [HAL-8063] Invalid Board ID On I/O=%3XH
+1-000-07-05 = [HAL-8063] Invalid Get Device Lists On I/O=%3XH
+1-000-07-06 = [HAL-8063] Invalid Board Type On I/O=%3XH
+1-000-07-07 = [HAL-8063] Invalid I/O Base Address On I/O=%3XH
+1-000-07-08 = [HAL-8063] Invalid System Function Code On I/O=%3XH
+1-000-07-09 = [HAL-8063] Invalid SRAM Space On I/O=%3XH
+1-000-07-0A = [HAL-8063] Invalid I/O Port Number On I/O=%3XH
+1-000-07-0B = [HAL-8063] Invalid I/O Interrupt Channel On I/O=%3XH
+1-000-07-0C = [HAL-8063] Invalid Read I/O Port On I/O=%3XH
+1-000-07-0D = [HAL-8063] Invalid Write I/O Port On I/O=%3XH
+1-000-07-0E = [HAL-8063] Invalid I/O Controller On I/O=%3XH
+1-000-07-0F = [HAL-8063] Invalid Register Value On I/O=%3XH
+1-000-07-10 = [HAL-8063] Invalid Board Status On I/O=%3XH
+1-000-07-11 = [HAL-8063] Invalid IRQ Number On I/O=%3XH
+1-000-07-12 = [HAL-8063] Invalid Initial Interrupt On I/O=%3XH
+1-000-07-13 = [HAL-8063] Invalid Release Interrupt On I/O=%3XH
+1-000-11-01 = [HAL-8184] Invalid Open I/O Resource On I/O=%3XH
+1-000-11-02 = [HAL-8184] Invalid Close I/O Resource On I/O=%3XH
+1-000-11-03 = [HAL-8184] Invalid Board Handle On I/O=%3XH
+1-000-11-04 = [HAL-8184] Invalid Board ID On I/O=%3XH
+1-000-11-05 = [HAL-8184] Invalid Get Device Lists On I/O=%3XH
+1-000-11-06 = [HAL-8184] Invalid Board Type On I/O=%3XH
+1-000-11-07 = [HAL-8184] Invalid I/O Base Address On I/O=%3XH
+1-000-11-08 = [HAL-8184] Invalid System Function Code On I/O=%3XH
+1-000-11-10 = [HAL-8184] Invalid Board Status On I/O=%3XH
+1-000-11-14 = [HAL-8184] Invalid Read EEPROM On I/O=%3XH
+1-000-11-15 = [HAL-8184] Invalid Write EEPROM On I/O=%3XH
+1-000-11-21 = [HAL-8184] Invalid A/D Control Word On I/O=%3XH
+1-000-11-22 = [HAL-8184] Invalid A/D Gain Control On I/O=%3XH
+1-000-11-23 = [HAL-8184] Invalid A/D Mode Control On I/O=%3XH
+1-000-11-24 = [HAL-8184] Invalid A/D Channel Number On I/O=%3XH
+1-000-11-25 = [HAL-8184] Invalid A/D Calibration Control On I/O=%3XH
+1-000-11-26 = [HAL-8184] Invalid AI Scale Control On I/O=%3XH
+1-000-11-27 = [HAL-8184] Invalid AI Filter Ratio Control On I/O=%3XH
+1-000-11-31 = [HAL-8184] Invalid D/A Channel Number On I/O=%3XH
+1-000-11-32 = [HAL-8184] Invalid AO Scale Control On I/O=%3XH
+1-000-11-42 = [HAL-8184] Invalid High Speed Counter Channel On I/O=%3XH
+1-000-11-43 = [HAL-8184] Invalid High Speed Counter Mode On I/O=%3XH
+1-000-11-44 = [HAL-8184] Invalid High Speed Counter Gain On I/O=%3XH
+1-000-11-45 = [HAL-8184] Invalid High Speed Counter Data Format On I/O=%3XH
+1-000-14-01 = [HAL-8185] Invalid Open I/O Resource On I/O=%3XH
+1-000-14-02 = [HAL-8185] Invalid Close I/O Resource On I/O=%3XH
+1-000-14-03 = [HAL-8185] Invalid Board Handle On I/O=%3XH
+1-000-14-04 = [HAL-8185] Invalid Board ID On I/O=%3XH
+1-000-14-05 = [HAL-8185] Invalid Get Device Lists On I/O=%3XH
+1-000-14-06 = [HAL-8185] Invalid Board Type On I/O=%3XH
+1-000-14-07 = [HAL-8185] Invalid I/O Base Address On I/O=%3XH
+1-000-14-08 = [HAL-8185] Invalid System Function Code On I/O=%3XH
+1-000-14-10 = [HAL-8185] Invalid Board Status On I/O=%3XH
+1-000-14-14 = [HAL-8185] Invalid Read EEPROM On I/O=%3XH
+1-000-14-15 = [HAL-8185] Invalid Write EEPROM On I/O=%3XH
+1-000-14-21 = [HAL-8185] Invalid A/D Control Word On I/O=%3XH
+1-000-14-22 = [HAL-8185] Invalid A/D Gain Control On I/O=%3XH
+1-000-14-23 = [HAL-8185] Invalid A/D Mode Control On I/O=%3XH
+1-000-14-24 = [HAL-8185] Invalid A/D Channel Number On I/O=%3XH
+1-000-14-25 = [HAL-8185] Invalid A/D Calibration Control On I/O=%3XH
+1-000-14-26 = [HAL-8185] Invalid AI Scale Control On I/O=%3XH
+1-000-14-27 = [HAL-8185] Invalid AI Filter Ratio Control On I/O=%3XH
+1-000-14-31 = [HAL-8185] Invalid D/A Channel Number On I/O=%3XH
+1-000-14-32 = [HAL-8185] Invalid AO Scale Control On I/O=%3XH
+1-000-31-01 = [HAL-8308] Invalid Open I/O Resource On I/O=%3XH
+1-000-31-02 = [HAL-8308] Invalid Close I/O Resource On I/O=%3XH
+1-000-31-03 = [HAL-8308] Invalid Board Handle On I/O=%3XH
+1-000-31-04 = [HAL-8308] Invalid Board ID On I/O=%3XH
+1-000-31-05 = [HAL-8308] Invalid Get Device Lists On I/O=%3XH
+1-000-31-06 = [HAL-8308] Invalid Board Type On I/O=%3XH
+1-000-31-07 = [HAL-8308] Invalid I/O Base Address On I/O=%3XH
+1-000-31-08 = [HAL-8308] Invalid System Function Code On I/O=%3XH
+1-000-31-10 = [HAL-8308] Invalid Board Status On I/O=%3XH
+1-000-31-14 = [HAL-8308] Invalid Read EEPROM On I/O=%3XH
+1-000-31-15 = [HAL-8308] Invalid Write EEPROM On I/O=%3XH
+1-000-31-21 = [HAL-8308] Invalid A/D Control Word On I/O=%3XH
+1-000-31-22 = [HAL-8308] Invalid A/D Gain Control On I/O=%3XH
+1-000-31-23 = [HAL-8308] Invalid A/D Mode Control On I/O=%3XH
+1-000-31-24 = [HAL-8308] Invalid A/D Channel Number On I/O=%3XH
+1-000-31-25 = [HAL-8308] Invalid A/D Calibration Control On I/O=%3XH
+1-000-31-26 = [HAL-8308] Invalid AI Scale Control On I/O=%3XH
+1-000-31-27 = [HAL-8308] Invalid AI Filter Ratio Control On I/O=%3XH
+1-000-31-28 = [HAL-8308] Invalid Thermocoupler Type On I/O=%3XH
+1-000-31-41 = [HAL-8308] Invalid PWM Channel Number On I/O=%3XH
+
+6-000-01-01 = [MMN] Program Internal Error = %3XH
+6-000-01-02 = [MMN] DLL Internal Error = %3XH
+6-000-01-04 = [MMN] Net Error = %3XH
+6-000-01-05 = [MMN] MMF Error = %3XH
+7-000-01-01 = [DBM] Program Internal Error = %3XH
+7-000-01-02 = [DBM] DLL Internal Error = %3XH
+7-000-01-03 = [DBM] Database Exception = %3XH
+
+A-000-00-00 = [PRJ-SCADA] Installation of CoreEngine ERROR!
+A-000-00-01 = [PRJ-SCADA] Loading PrjDllList.ini ERROR!
+A-000-00-03 = [PRJ-SCADA] Loading HaCnf.sca ERROR!
+A-000-00-02 = [PRJ-SCADA] Unexpect Error in DLL (%3XH)
+
+4-000-00-01 = [Motion] X-Axis Max. Following Error Exceeded!!
+4-000-00-02 = [Motion] Y-Axis Max. Following Error Exceeded!!
+4-000-00-03 = [Motion] Z-Axis Max. Following Error Exceeded!!
+4-000-00-04 = [Motion] C-Axis Max. Following Error Exceeded!!
+4-000-00-05 = [Motion] Software-OT Checked Error!!
+4-000-00-06 = [Motion] X-Axis Max. Servo Lag Exceeded!!
+4-000-00-07 = [Motion] Y-Axis Max. Servo Lag Exceeded!!
+4-000-00-08 = [Motion] Z-Axis Max. Servo Lag Exceeded!!
+4-000-00-09 = [Motion] C-Axis Max. Servo Lag Exceeded!!
+4-000-00-0A = [Motion] Hardware Emergency Stopped!!
+4-000-00-0B = [Motion] Software Emergency Stopped!!
+4-000-00-0C = [Motion] G-Code Command Lack of Terminator!!
+4-000-00-0D = [Motion] Found No Index or Z-Phase Signal!!
+4-000-00-0E = [Motion] X-Axis within Home-Dog!!
+4-000-00-0F = [Motion] Y-Axis within Home-Dog!!
+4-000-00-10 = [Motion] Z-Axis within Home-Dog!!
+4-000-00-11 = [Motion] C-Axis within Home-Dog!!
+4-000-00-12 = [Motion] Fail to Return to Zero Position!!
+4-000-00-13 = [Motion] OT Error!!
+4-000-00-14 = [Motion] Abnormal Program Termination (No Successive Data)!!
+4-000-00-15 = [Motion] Failed to Confirm Status of Stopped!!
+4-000-00-16 = [Motion] Invalid Software-OT Limit Values!!
+4-000-00-17 = [Motion] Invalid Software-OT Limit2 Values!!
+4-000-00-18 = [Motion] Software-OT Limit2 Exceeded!!
+4-000-00-19 = [Motion] Home Process Failed to Stop within Home-Dog!!
+4-000-00-1A = [Motion] Failed to Create Profile for Rigid Tapping!!
+4-000-00-1B = [Motion] Invalid Rigid Tapping Parameters!!
+4-000-00-1C = [Motion] Non-Zero Start Spindle Speed for Rigid Tapping!!
+4-000-00-1D = [Motion] E-CAM Compensation Error!!
+4-000-00-1E = [Motion] Invalid G01 Acc/Dec Parameters!!
+4-000-00-1F = [Motion] Invalid X-Axis G00 Acc/Dec Parameters!!
+4-000-00-20 = [Motion] Invalid Y-Axis G00 Acc/Dec Parameters!!
+4-000-00-21 = [Motion] Invalid Z-Axis G00 Acc/Dec Parameters!!
+4-000-00-22 = [Motion] Invalid C-Axis G00 Acc/Dec Parameters!!
+4-000-00-23 = [Motion] Invalid Home Method!!
+4-000-00-24 = [Motion] Invalid In-Window Parameters!!
+4-000-00-25 = [Motion] Invalid Encoder Multiplier Values!!
+4-000-00-26 = [Motion] Invalid PPR Parameters!!
+4-000-00-27 = [Motion] Invalid Second-Stage Homing Speed!!
+4-000-00-28 = [Motion] X-Axis Positive-Direction OT Error!!
+4-000-00-29 = [Motion] X-Axis Negative-Direction OT Error!!
+4-000-00-2A = [Motion] Y-Axis Positive-Direction OT Error!!
+4-000-00-2B = [Motion] Y-Axis Negative-Direction OT Error!!
+4-000-00-2C = [Motion] Z-Axis Positive-Direction OT Error!!
+4-000-00-2D = [Motion] Z-Axis Negative-Direction OT Error!!
+4-000-00-2E = [Motion] C-Axis Positive-Direction OT Error!!
+4-000-00-2F = [Motion] C-Axis Negative-Direction OT Error!!
+4-000-00-30 = [Motion] Invalid Circular Command Error!!
+4-000-00-31 = [Motion] Invalid Spindle Status for Rigid Tapping!!
+4-000-00-32 = [Motion] X-Axis Positive Software-OT Exceeded!!
+4-000-00-33 = [Motion] X-Axis Negative Software-OT Exceeded!!
+4-000-00-34 = [Motion] Y-Axis Positive Software-OT Exceeded!!
+4-000-00-35 = [Motion] Y-Axis Negative Software-OT Exceeded!!
+4-000-00-36 = [Motion] Z-Axis Positive Software-OT Exceeded!!
+4-000-00-37 = [Motion] Z-Axis Negative Software-OT Exceeded!!
+4-000-00-38 = [Motion] C-Axis Positive Software-OT Exceeded!!
+4-000-00-39 = [Motion] C-Axis Negative Software-OT Exceeded!!
+4-000-00-3A = [Motion] Buffer Overflow of Acc/Dec after Interpolation!!
+4-000-00-3B = [Motion] Axes Going to Pass Restricted Bondaries!!
+4-000-00-41 = [Motion] Software Internal Error!!
+4-000-00-42 = [Motion] Command and Movement in Different Directions!!
+4-000-00-43 = [Motion] Previous Command Unfinished!!
+4-000-00-44 = [Motion] M-Code Error!!
+4-000-00-45 = [Motion] Internal ACM Execution Error!!
+4-000-00-4F = [Motion] Can't Specific Block Execution when Feedhold or Retrace!!
+4-000-00-50 = [Motion] Compare-Out Failed!!
+4-000-00-51 = [Motion] Compare-Out Range Error!!
+4-000-00-52 = [Motion] Invalid R Register Designation!!
+4-000-00-53 = [Motion] JOG Mode Invalid Specific Move Command!!
+4-000-00-54 = [Motion] JOG Mode Arc Move Invalid Center or Radius!!
+4-000-00-55 = [Motion] JOG Mode Arc Move Radius Specified for Circle!!
+4-000-00-56 = [Motion] JOG Mode Command Planning Error!!
+4-000-00-57 = [Motion] Not Allowed to Switch Mode while Retracing!!
+4-000-00-58 = [Motion] X, Y, Z, or C Axis Over Speed Error!!
+4-000-00-59 = [Motion] X, Y, Z, or C Axis Encorder Error!!
+4-000-00-5A = [Motion] No Successive Command Error!!
+4-000-00-5B = [Motion] S-PCL Axis Positive Feedback Error!!
+4-000-00-5C = [Motion] S-PCL Axis Lag Exceeded!!
+4-000-00-5D = [Motion] Motion Board WatchDog Timeout!!
+4-000-00-5E = [Motion] Fail to Open NC Program!!
+4-000-00-5F = [Motion] Program Execution Length Exceeded!!
+4-000-00-60 = [Motion] NC Program Compilation Found Error!!
+4-000-00-61 = [Motion] Mechanism Conversion Calculation Error!!
+4-000-00-62 = [Motion] PID Module System Error!!
+4-000-00-63 = [Motion] PLC Module System Error!!
+4-000-00-64 = [Motion] Motion Module System Error!!
+4-000-00-65 = [Motion] Nested G70 Loop Error!!
+4-000-00-66 = [Motion] Too Many Levels of Subprogram Call (Over 8 Levels)!!
+4-000-00-67 = [Motion] G73 No Returned Line Error!!
+4-000-00-68 = [Motion] Divided by Zero Error!!
+4-000-00-69 = [Motion] Matrix or Vector Calculation Error!!
+4-000-00-6A = [Motion] Not Supported G-Code!!
+4-000-00-6B = [Motion] Canned Cycle Error!!
+4-000-00-6C = [Motion] Fail to Access Motion Board!!
+4-000-00-6D = [Motion] Fail to Get Axis Position!!
+4-000-00-6E = [Motion] Position Maintain Error!!
+4-000-00-6F = [Motion] Invalid Distance after Registration (G31) Occurs!!
+4-000-00-70 = [Motion] Position Command Lag Exceeded!!
+4-000-00-71 = [Motion] Deviation of Absolute from Program Position Exceeded!!
+4-000-00-72 = [Motion] Resultant Speed from Position Planning Exceeded!!
+4-000-00-73 = [Motion] Invalid Servo On Status for Comm. Axes!!
+4-000-00-74 = [Motion] Fail to Open Playback Data File!!
+4-000-00-75 = [Motion] Invalid Playback Data Format!!
+4-000-00-76 = [Motion] Fail to Open MDR Data File!!
+4-000-00-77 = [Motion] Invalid Playback Scaling Factor!!
+4-000-00-78 = [Motion] Communication Error for Comm. Axes!!
+4-000-00-79 = [Motion] Abnormally Servo Off Error!!
+4-000-00-7D = [Motion] Communication Timeout Error!!
+4-000-01-F4 = [Motion] Fail to Open MOT File (Runtime G-Code Format)!!
+4-000-01-F5 = [Motion] Fail to Re-Open MOT File (Runtime G-Code Format)!!
+4-000-03-E8 = [MotionAPI] Fail to Read Windows Registry!!
+4-000-03-E9 = [MotionAPI] Fail to Start Motion Module (Probably Invalid Parameters)!!
+4-000-03-EA = [MotionAPI] Fail to Create Motion Groups!!
+4-000-03-EB = [MotionAPI] Fail to Open System Variable File!!
+4-000-03-EC = [MotionAPI] Invalid Runtime Configuration (Probably Export Needed)!!
+4-000-03-ED = [MotionAPI] Fail to Configure Data Logging Timer!!
+4-000-03-EE = [MotionAPI] Wrong System Configuration!!
